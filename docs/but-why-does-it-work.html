@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>1.3 But why does it work? | Chaos Game</title>
+  <meta name="description" content="1.3 But why does it work? | Chaos Game" />
+  <meta name="generator" content="bookdown 0.29 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="1.3 But why does it work? | Chaos Game" />
+  <meta property="og:type" content="book" />
+  <meta property="og:image" content="/images/foldout_00.png" />
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="1.3 But why does it work? | Chaos Game" />
+  
+  
+  <meta name="twitter:image" content="/images/foldout_00.png" />
+
+<meta name="author" content="" />
+
+
+<meta name="date" content="2023-01-01" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="hello-fractals-1.html"/>
+<link rel="next" href="examples-in-python.html"/>
+<script src="libs/jquery/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections/anchor-sections.js"></script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-5650686-12"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-5650686-12');
+</script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+<link rel="stylesheet" href="css/style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./"><h3>Chaos Game</h3></a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Cover</a></li>
+<li class="chapter" data-level="" data-path="how-to-read-this-book.html"><a href="how-to-read-this-book.html"><i class="fa fa-check"></i>How to read this book?</a></li>
+<li class="chapter" data-level="1" data-path="hello-fractals.html"><a href="hello-fractals.html"><i class="fa fa-check"></i><b>1</b> Hello, fractals!</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="wacław-sierpiński.html"><a href="wacław-sierpiński.html"><i class="fa fa-check"></i><b>1.1</b> Wacław Sierpiński</a></li>
+<li class="chapter" data-level="1.2" data-path="hello-fractals-1.html"><a href="hello-fractals-1.html"><i class="fa fa-check"></i><b>1.2</b> Hello, fractals!</a>
+<ul>
+<li class="chapter" data-level="1.2.1" data-path="hello-fractals-1.html"><a href="hello-fractals-1.html#cantor-dust"><i class="fa fa-check"></i><b>1.2.1</b> Cantor dust</a></li>
+<li class="chapter" data-level="1.2.2" data-path="hello-fractals-1.html"><a href="hello-fractals-1.html#sierpiński-triangle"><i class="fa fa-check"></i><b>1.2.2</b> Sierpiński triangle</a></li>
+</ul></li>
+<li class="chapter" data-level="1.3" data-path="but-why-does-it-work.html"><a href="but-why-does-it-work.html"><i class="fa fa-check"></i><b>1.3</b> But why does it work?</a>
+<ul>
+<li class="chapter" data-level="1.3.1" data-path="but-why-does-it-work.html"><a href="but-why-does-it-work.html#topological-dimension"><i class="fa fa-check"></i><b>1.3.1</b> Topological dimension</a></li>
+<li class="chapter" data-level="1.3.2" data-path="but-why-does-it-work.html"><a href="but-why-does-it-work.html#minkowski-dimension-or-fractal-box-counting-dimension"><i class="fa fa-check"></i><b>1.3.2</b> Minkowski dimension, or fractal box-counting dimension</a></li>
+<li class="chapter" data-level="1.3.3" data-path="but-why-does-it-work.html"><a href="but-why-does-it-work.html#sierpiński-carpet"><i class="fa fa-check"></i><b>1.3.3</b> Sierpiński carpet</a></li>
+</ul></li>
+<li class="chapter" data-level="1.4" data-path="examples-in-python.html"><a href="examples-in-python.html"><i class="fa fa-check"></i><b>1.4</b> Examples in Python</a>
+<ul>
+<li class="chapter" data-level="1.4.1" data-path="examples-in-python.html"><a href="examples-in-python.html#cantor-dust-1"><i class="fa fa-check"></i><b>1.4.1</b> Cantor dust</a></li>
+<li class="chapter" data-level="1.4.2" data-path="examples-in-python.html"><a href="examples-in-python.html#sierpiński-triangle-1"><i class="fa fa-check"></i><b>1.4.2</b> Sierpiński triangle</a></li>
+<li class="chapter" data-level="1.4.3" data-path="examples-in-python.html"><a href="examples-in-python.html#sierpiński-carpet-1"><i class="fa fa-check"></i><b>1.4.3</b> Sierpiński carpet</a></li>
+</ul></li>
+<li class="chapter" data-level="1.5" data-path="examples-in-r.html"><a href="examples-in-r.html"><i class="fa fa-check"></i><b>1.5</b> Examples in R</a>
+<ul>
+<li class="chapter" data-level="1.5.1" data-path="examples-in-r.html"><a href="examples-in-r.html#cantor-dust-2"><i class="fa fa-check"></i><b>1.5.1</b> Cantor dust</a></li>
+<li class="chapter" data-level="1.5.2" data-path="examples-in-r.html"><a href="examples-in-r.html#sierpiński-triangle-2"><i class="fa fa-check"></i><b>1.5.2</b> Sierpiński triangle</a></li>
+<li class="chapter" data-level="1.5.3" data-path="examples-in-r.html"><a href="examples-in-r.html#sierpiński-carpet-2"><i class="fa fa-check"></i><b>1.5.3</b> Sierpiński carpet</a></li>
+</ul></li>
+<li class="chapter" data-level="1.6" data-path="examples-in-julia.html"><a href="examples-in-julia.html"><i class="fa fa-check"></i><b>1.6</b> Examples in Julia</a>
+<ul>
+<li class="chapter" data-level="1.6.1" data-path="examples-in-julia.html"><a href="examples-in-julia.html#cantor-dust-3"><i class="fa fa-check"></i><b>1.6.1</b> Cantor dust</a></li>
+<li class="chapter" data-level="1.6.2" data-path="examples-in-julia.html"><a href="examples-in-julia.html#sierpiński-triangle-3"><i class="fa fa-check"></i><b>1.6.2</b> Sierpiński triangle</a></li>
+<li class="chapter" data-level="1.6.3" data-path="examples-in-julia.html"><a href="examples-in-julia.html#sierpiński-carpet-3"><i class="fa fa-check"></i><b>1.6.3</b> Sierpiński carpet</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="fractal-that-is-fixed-point.html"><a href="fractal-that-is-fixed-point.html"><i class="fa fa-check"></i><b>2</b> Fractal, that is fixed point</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="stefan-banach.html"><a href="stefan-banach.html"><i class="fa fa-check"></i><b>2.1</b> Stefan Banach</a></li>
+<li class="chapter" data-level="2.2" data-path="fractal-that-is-fixed-point-1.html"><a href="fractal-that-is-fixed-point-1.html"><i class="fa fa-check"></i><b>2.2</b> Fractal, that is fixed point</a>
+<ul>
+<li class="chapter" data-level="2.2.1" data-path="fractal-that-is-fixed-point-1.html"><a href="fractal-that-is-fixed-point-1.html#dragons-and-ferns"><i class="fa fa-check"></i><b>2.2.1</b> Dragons and ferns</a></li>
+<li class="chapter" data-level="2.2.2" data-path="fractal-that-is-fixed-point-1.html"><a href="fractal-that-is-fixed-point-1.html#sierpiński-pentagon"><i class="fa fa-check"></i><b>2.2.2</b> Sierpiński pentagon</a></li>
+<li class="chapter" data-level="2.2.3" data-path="fractal-that-is-fixed-point-1.html"><a href="fractal-that-is-fixed-point-1.html#pythagoras-tree"><i class="fa fa-check"></i><b>2.2.3</b> Pythagoras tree</a></li>
+<li class="chapter" data-level="2.2.4" data-path="fractal-that-is-fixed-point-1.html"><a href="fractal-that-is-fixed-point-1.html#heighway-dragon"><i class="fa fa-check"></i><b>2.2.4</b> Heighway Dragon</a></li>
+<li class="chapter" data-level="2.2.5" data-path="fractal-that-is-fixed-point-1.html"><a href="fractal-that-is-fixed-point-1.html#barnsley-fern"><i class="fa fa-check"></i><b>2.2.5</b> Barnsley fern</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="but-why-does-it-work-1.html"><a href="but-why-does-it-work-1.html"><i class="fa fa-check"></i><b>2.3</b> But why does it work?</a>
+<ul>
+<li class="chapter" data-level="2.3.1" data-path="but-why-does-it-work-1.html"><a href="but-why-does-it-work-1.html#metric-space"><i class="fa fa-check"></i><b>2.3.1</b> Metric space</a></li>
+<li class="chapter" data-level="2.3.2" data-path="but-why-does-it-work-1.html"><a href="but-why-does-it-work-1.html#hausdorff-distance"><i class="fa fa-check"></i><b>2.3.2</b> Hausdorff distance</a></li>
+<li class="chapter" data-level="2.3.3" data-path="but-why-does-it-work-1.html"><a href="but-why-does-it-work-1.html#cauchy-sequence"><i class="fa fa-check"></i><b>2.3.3</b> Cauchy sequence</a></li>
+<li class="chapter" data-level="2.3.4" data-path="but-why-does-it-work-1.html"><a href="but-why-does-it-work-1.html#complete-space"><i class="fa fa-check"></i><b>2.3.4</b> Complete space</a></li>
+<li class="chapter" data-level="2.3.5" data-path="but-why-does-it-work-1.html"><a href="but-why-does-it-work-1.html#contraction"><i class="fa fa-check"></i><b>2.3.5</b> Contraction</a></li>
+<li class="chapter" data-level="2.3.6" data-path="but-why-does-it-work-1.html"><a href="but-why-does-it-work-1.html#affine-transformation"><i class="fa fa-check"></i><b>2.3.6</b> Affine transformation</a></li>
+<li class="chapter" data-level="2.3.7" data-path="but-why-does-it-work-1.html"><a href="but-why-does-it-work-1.html#hutchinsons-theorem"><i class="fa fa-check"></i><b>2.3.7</b> Hutchinson’s theorem</a></li>
+<li class="chapter" data-level="2.3.8" data-path="but-why-does-it-work-1.html"><a href="but-why-does-it-work-1.html#banachs-fixed-point-theorem"><i class="fa fa-check"></i><b>2.3.8</b> Banach’s fixed point theorem</a></li>
+</ul></li>
+<li class="chapter" data-level="2.4" data-path="examples-in-python-1.html"><a href="examples-in-python-1.html"><i class="fa fa-check"></i><b>2.4</b> Examples in Python</a>
+<ul>
+<li class="chapter" data-level="2.4.1" data-path="examples-in-python-1.html"><a href="examples-in-python-1.html#sierpiński-triangle-4"><i class="fa fa-check"></i><b>2.4.1</b> Sierpiński triangle</a></li>
+<li class="chapter" data-level="2.4.2" data-path="examples-in-python-1.html"><a href="examples-in-python-1.html#sierpiński-pentagon-1"><i class="fa fa-check"></i><b>2.4.2</b> Sierpiński pentagon</a></li>
+<li class="chapter" data-level="2.4.3" data-path="examples-in-python-1.html"><a href="examples-in-python-1.html#heighways-dragon"><i class="fa fa-check"></i><b>2.4.3</b> Heighway’s Dragon</a></li>
+<li class="chapter" data-level="2.4.4" data-path="examples-in-python-1.html"><a href="examples-in-python-1.html#symmetric-binary-tree-pythagoras-tree"><i class="fa fa-check"></i><b>2.4.4</b> Symmetric binary tree / Pythagoras’ tree</a></li>
+</ul></li>
+<li class="chapter" data-level="2.5" data-path="examples-in-r-1.html"><a href="examples-in-r-1.html"><i class="fa fa-check"></i><b>2.5</b> Examples in R</a>
+<ul>
+<li class="chapter" data-level="2.5.1" data-path="examples-in-r-1.html"><a href="examples-in-r-1.html#sierpiński-triangle-5"><i class="fa fa-check"></i><b>2.5.1</b> Sierpiński triangle</a></li>
+<li class="chapter" data-level="2.5.2" data-path="examples-in-r-1.html"><a href="examples-in-r-1.html#sierpiński-pentagon-2"><i class="fa fa-check"></i><b>2.5.2</b> Sierpiński pentagon</a></li>
+<li class="chapter" data-level="2.5.3" data-path="examples-in-r-1.html"><a href="examples-in-r-1.html#heighways-dragon-1"><i class="fa fa-check"></i><b>2.5.3</b> Heighway’s Dragon</a></li>
+<li class="chapter" data-level="2.5.4" data-path="examples-in-r-1.html"><a href="examples-in-r-1.html#symmetric-binary-tree-pythagoras-tree-1"><i class="fa fa-check"></i><b>2.5.4</b> Symmetric binary tree / Pythagoras’ tree</a></li>
+</ul></li>
+<li class="chapter" data-level="2.6" data-path="examples-in-julia-1.html"><a href="examples-in-julia-1.html"><i class="fa fa-check"></i><b>2.6</b> Examples in Julia</a>
+<ul>
+<li class="chapter" data-level="2.6.1" data-path="examples-in-julia-1.html"><a href="examples-in-julia-1.html#sierpiński-triangle-6"><i class="fa fa-check"></i><b>2.6.1</b> Sierpiński triangle</a></li>
+<li class="chapter" data-level="2.6.2" data-path="examples-in-julia-1.html"><a href="examples-in-julia-1.html#sierpiński-pentagon-3"><i class="fa fa-check"></i><b>2.6.2</b> Sierpiński pentagon</a></li>
+<li class="chapter" data-level="2.6.3" data-path="examples-in-julia-1.html"><a href="examples-in-julia-1.html#heighways-dragon-2"><i class="fa fa-check"></i><b>2.6.3</b> Heighway’s Dragon</a></li>
+<li class="chapter" data-level="2.6.4" data-path="examples-in-julia-1.html"><a href="examples-in-julia-1.html#symmetric-binary-tree-pythagoras-tree-2"><i class="fa fa-check"></i><b>2.6.4</b> Symmetric binary tree / Pythagoras’ tree</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="gra-w-chaos.html"><a href="gra-w-chaos.html"><i class="fa fa-check"></i><b>3</b> Gra w chaos</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="hugo-steinhaus.html"><a href="hugo-steinhaus.html"><i class="fa fa-check"></i><b>3.1</b> Hugo Steinhaus</a></li>
+<li class="chapter" data-level="3.2" data-path="gra-w-chaos-1.html"><a href="gra-w-chaos-1.html"><i class="fa fa-check"></i><b>3.2</b> Gra w Chaos</a>
+<ul>
+<li class="chapter" data-level="3.2.1" data-path="gra-w-chaos-1.html"><a href="gra-w-chaos-1.html#gra-w-chaos-i-trójkąty"><i class="fa fa-check"></i><b>3.2.1</b> Gra w chaos i trójkąty</a></li>
+<li class="chapter" data-level="3.2.2" data-path="gra-w-chaos-1.html"><a href="gra-w-chaos-1.html#co-tu-się-dzieje"><i class="fa fa-check"></i><b>3.2.2</b> Co tu się dzieje?</a></li>
+<li class="chapter" data-level="3.2.3" data-path="gra-w-chaos-1.html"><a href="gra-w-chaos-1.html#gra-w-chaos-i-fraktale"><i class="fa fa-check"></i><b>3.2.3</b> Gra w Chaos i fraktale</a></li>
+<li class="chapter" data-level="3.2.4" data-path="gra-w-chaos-1.html"><a href="gra-w-chaos-1.html#przekształcenia-afiniczne"><i class="fa fa-check"></i><b>3.2.4</b> Przekształcenia afiniczne</a></li>
+<li class="chapter" data-level="3.2.5" data-path="gra-w-chaos-1.html"><a href="gra-w-chaos-1.html#paprocie-i-chaos"><i class="fa fa-check"></i><b>3.2.5</b> Paprocie i chaos</a></li>
+<li class="chapter" data-level="3.2.6" data-path="gra-w-chaos-1.html"><a href="gra-w-chaos-1.html#bardziej-formalnie"><i class="fa fa-check"></i><b>3.2.6</b> Bardziej formalnie</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="zastosowania.html"><a href="zastosowania.html"><i class="fa fa-check"></i><b>3.3</b> Zastosowania</a>
+<ul>
+<li class="chapter" data-level="3.3.1" data-path="zastosowania.html"><a href="zastosowania.html#gra-w-chaos-i-genetyka"><i class="fa fa-check"></i><b>3.3.1</b> Gra w chaos i genetyka</a></li>
+<li class="chapter" data-level="3.3.2" data-path="zastosowania.html"><a href="zastosowania.html#gra-w-chaos-i-muzyka"><i class="fa fa-check"></i><b>3.3.2</b> Gra w chaos i muzyka</a></li>
+<li class="chapter" data-level="3.3.3" data-path="zastosowania.html"><a href="zastosowania.html#wymiar-fraktalny-mózgu"><i class="fa fa-check"></i><b>3.3.3</b> Wymiar fraktalny mózgu</a></li>
+</ul></li>
+<li class="chapter" data-level="3.4" data-path="przykłady-w-języku-python.html"><a href="przykłady-w-języku-python.html"><i class="fa fa-check"></i><b>3.4</b> Przykłady w języku Python</a>
+<ul>
+<li class="chapter" data-level="3.4.1" data-path="przykłady-w-języku-python.html"><a href="przykłady-w-języku-python.html#trójkąt-sierpińskiego-raz-jeszcze"><i class="fa fa-check"></i><b>3.4.1</b> Trójkąt Sierpińskiego raz jeszcze</a></li>
+<li class="chapter" data-level="3.4.2" data-path="przykłady-w-języku-python.html"><a href="przykłady-w-języku-python.html#paproć-barnsleya"><i class="fa fa-check"></i><b>3.4.2</b> Paproć Barnsleya</a></li>
+<li class="chapter" data-level="3.4.3" data-path="przykłady-w-języku-python.html"><a href="przykłady-w-języku-python.html#liść-klonu"><i class="fa fa-check"></i><b>3.4.3</b> Liść klonu</a></li>
+<li class="chapter" data-level="3.4.4" data-path="przykłady-w-języku-python.html"><a href="przykłady-w-języku-python.html#spirala"><i class="fa fa-check"></i><b>3.4.4</b> Spirala</a></li>
+</ul></li>
+<li class="chapter" data-level="3.5" data-path="przykłady-w-języku-r.html"><a href="przykłady-w-języku-r.html"><i class="fa fa-check"></i><b>3.5</b> Przykłady w języku R</a>
+<ul>
+<li class="chapter" data-level="3.5.1" data-path="przykłady-w-języku-r.html"><a href="przykłady-w-języku-r.html#trójkąt-sierpińskiego-raz-jeszcze-1"><i class="fa fa-check"></i><b>3.5.1</b> Trójkąt Sierpińskiego raz jeszcze</a></li>
+<li class="chapter" data-level="3.5.2" data-path="przykłady-w-języku-r.html"><a href="przykłady-w-języku-r.html#paproć-barnsleya-1"><i class="fa fa-check"></i><b>3.5.2</b> Paproć Barnsleya</a></li>
+<li class="chapter" data-level="3.5.3" data-path="przykłady-w-języku-r.html"><a href="przykłady-w-języku-r.html#liść-klonu-1"><i class="fa fa-check"></i><b>3.5.3</b> Liść klonu</a></li>
+<li class="chapter" data-level="3.5.4" data-path="przykłady-w-języku-r.html"><a href="przykłady-w-języku-r.html#spirala-1"><i class="fa fa-check"></i><b>3.5.4</b> Spirala</a></li>
+</ul></li>
+<li class="chapter" data-level="3.6" data-path="przykłady-w-języku-julia.html"><a href="przykłady-w-języku-julia.html"><i class="fa fa-check"></i><b>3.6</b> Przykłady w języku Julia</a>
+<ul>
+<li class="chapter" data-level="3.6.1" data-path="przykłady-w-języku-julia.html"><a href="przykłady-w-języku-julia.html#trójkąt-sierpińskiego-raz-jeszcze-2"><i class="fa fa-check"></i><b>3.6.1</b> Trójkąt Sierpińskiego raz jeszcze</a></li>
+<li class="chapter" data-level="3.6.2" data-path="przykłady-w-języku-julia.html"><a href="przykłady-w-języku-julia.html#paproć-barnsleya-2"><i class="fa fa-check"></i><b>3.6.2</b> Paproć Barnsleya</a></li>
+<li class="chapter" data-level="3.6.3" data-path="przykłady-w-języku-julia.html"><a href="przykłady-w-języku-julia.html#liść-klonu-2"><i class="fa fa-check"></i><b>3.6.3</b> Liść klonu</a></li>
+<li class="chapter" data-level="3.6.4" data-path="przykłady-w-języku-julia.html"><a href="przykłady-w-języku-julia.html#spirala-2"><i class="fa fa-check"></i><b>3.6.4</b> Spirala</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="kieszonkowy-atlas-fraktali.html"><a href="kieszonkowy-atlas-fraktali.html"><i class="fa fa-check"></i><b>4</b> Kieszonkowy atlas fraktali</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="paproć-barnsleya-3.html"><a href="paproć-barnsleya-3.html"><i class="fa fa-check"></i><b>4.1</b> Paproć Barnsleya</a></li>
+<li class="chapter" data-level="4.2" data-path="liść-klonu-3.html"><a href="liść-klonu-3.html"><i class="fa fa-check"></i><b>4.2</b> Liść klonu</a></li>
+<li class="chapter" data-level="4.3" data-path="pięciokrotka-mcwortera-ang.-mcworters-pentigree.html"><a href="pięciokrotka-mcwortera-ang.-mcworters-pentigree.html"><i class="fa fa-check"></i><b>4.3</b> Pięciokrotka McWortera (ang. McWorter’s pentigree)</a></li>
+<li class="chapter" data-level="4.4" data-path="drzewa.html"><a href="drzewa.html"><i class="fa fa-check"></i><b>4.4</b> Drzewa</a></li>
+<li class="chapter" data-level="4.5" data-path="spirala-3.html"><a href="spirala-3.html"><i class="fa fa-check"></i><b>4.5</b> Spirala</a></li>
+<li class="chapter" data-level="4.6" data-path="wielokąty-sierpińskiego.html"><a href="wielokąty-sierpińskiego.html"><i class="fa fa-check"></i><b>4.6</b> Wielokąty Sierpińskiego</a></li>
+<li class="chapter" data-level="4.7" data-path="smoki.html"><a href="smoki.html"><i class="fa fa-check"></i><b>4.7</b> Smoki</a></li>
+<li class="chapter" data-level="4.8" data-path="sky-is-the-limit.html"><a href="sky-is-the-limit.html"><i class="fa fa-check"></i><b>4.8</b> Sky is the limit</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="bibliografia.html"><a href="bibliografia.html"><i class="fa fa-check"></i>Bibliografia</a></li>
+<li class="divider"></li>
+<li><a href="https://www.mi2.ai/beta-bit.html" target="_blank">Other books in the Beta and Bit series</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Chaos Game</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="but-why-does-it-work" class="section level2 hasAnchor" number="1.3">
+<h2><span class="header-section-number">1.3</span> But why does it work?<a href="but-why-does-it-work.html#but-why-does-it-work" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>It is a lovely creation. But what properties does it have? How big is its area?</p>
+<p>A quick calculation clears up any doubts. In step <span class="math inline">\(k\)</span>, the triangle consists of <span class="math inline">\(3^k\)</span> triangles, each with side <span class="math inline">\(1/2^k\)</span>, that is, area <span class="math inline">\(\sqrt{3}/2^{2k+1}\)</span>. The total area of what remains after step <span class="math inline">\(k\)</span> is <span class="math inline">\((3/4)^k \cdot \sqrt{3}/2\)</span>. In the limit, we get:</p>
+<p><span class="math display">\[
+\lim_{k \rightarrow \infty} (3/4)^k \cdot \sqrt{3}/2 = 0.
+\]</span></p>
+<p>The Sierpiński triangle is, therefore, so hollow that it has an area equal to 0. And how long is its edge? In step <span class="math inline">\(k\)</span>, the edge increases by <span class="math inline">\(3^{k-1}\)</span> triangles, each with side of length <span class="math inline">\((1/2)^k\)</span>, that is, perimeter of <span class="math inline">\(3 \cdot (1/2)^k\)</span>. The total edge length in a step <span class="math inline">\(k\)</span> is:</p>
+<p><span class="math display">\[
+\sum_{i=1}^k 3^{k-1} \cdot 3 \cdot (1/2)^k = \sum_{i=1}^k (3/2)^k.
+\]</span></p>
+<p>The elements of this sum grow to infinity, so the whole edge of the triangle consequently explodes to infinity:</p>
+<p><span class="math display">\[
+\lim_{k \rightarrow \infty}\sum_{i=1}^k (3/2)^k = \infty.
+\]</span></p>
+<p>What is this figure? It is bounded because it fits in a triangle with side 1 but has an infinite perimeter with zero area. What dimension is it from?</p>
+<p>Probably by this point, some readers are asking themselves what fractals are. Are they just some strange images? And if so, how do you characterize them?</p>
+<p>One of the more frequently repeated definitions of fractals is the one given by Mandelbrot, which I will paraphrase:</p>
+<p><strong>Definition</strong> (fraktal). <em>A fractal is a set whose fractal dimension is higher than the topological dimension.</em></p>
+<p>As will become clear in a moment, often the fractal dimension doesn’t need to be an integer, hence the name fractal, from the French <em>fractus</em> and the Latin <em>frangěre</em> – to break, fray, fractional.</p>
+<p>But what is this topological and fractal dimension?</p>
+<div id="topological-dimension" class="section level3 hasAnchor" number="1.3.1">
+<h3><span class="header-section-number">1.3.1</span> Topological dimension<a href="but-why-does-it-work.html#topological-dimension" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>When we think of Euclidean spaces, the dimension is defined by the number of orthogonal directions spanning a given space. Therefore, a point has dimension 0, a line has dimension 1, a plane has dimension 2, and we all experience a three-dimensional space. We can describe specific objects in higher-dimensional spaces, there are no limitations. A mathematician can also talk excitedly about the function space, which is infinitely dimensional.</p>
+<p>Similarly, we can think about the dimensions of sets. Intuitively, the dimension of a set will be the number of orthogonal segments that fit in that set. However, one should be careful. Everything seems to be correct; a point has dimension 0, a line segment has dimension 1, a square has dimension 2, a cube has dimension 3, and so on. However, what to do with a circle? No line segment fits in it. But after all, it should have a dimension greater than 0 because it is a kind of line segment with the ends glued together. So ideally, it should also have dimension <span class="math inline">\(1\)</span>.</p>
+<p>Therefore, the issue is more complicated. Mathematicians have been thinking about it for a long time, and the formal definition of the dimension for sets is relatively young. The first inductive definition was proposed less than 100 years ago independently by Paul Urson and Karl Menger (1922-1923). Today we have at least a few different definitions of dimension. Those interested will find them, along with many interesting facts, in the article <em>A few words about dimension</em> <span class="citation">[<a href="#ref-wymiar" role="doc-biblioref">Nowa11</a>]</span> (Polish: <em>Kilka słów o wymiarze</em>).</p>
+<p>For further analysis, we will keep the intuitive definition – with the number of orthogonal vectors that can be embedded in the analyzed set.</p>
+</div>
+<div id="minkowski-dimension-or-fractal-box-counting-dimension" class="section level3 hasAnchor" number="1.3.2">
+<h3><span class="header-section-number">1.3.2</span> Minkowski dimension, or fractal box-counting dimension<a href="but-why-does-it-work.html#minkowski-dimension-or-fractal-box-counting-dimension" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>There are also several definitions of fractal dimension but probably the most popular is Minkowski’s definition, often called box-counting dimension.
+It is determined for geometric objects embedded in ordinary <span class="math inline">\(p\)</span>-dimensional spaces (we will practically limit ourselves only to <span class="math inline">\(p=2\)</span>). To determine it, we need to count how many <span class="math inline">\(p\)</span>-dimensional boxes of side <span class="math inline">\(\varepsilon\)</span> can cover the object of interest.</p>
+<p><em>Mandelbrot, when writing about fractal dimension, referred to the definition of the Hausdorff dimension, which is a generalization of the Minkowski dimension. In Hausdorff’s definition, instead of equal-sized boxes, we can cover the analyzed object with any family of sets with diameters converging to 0. However, this margin is too small to accurately represent and explain the Hausdorff dimension, so let’s stay with the box dimension.</em></p>
+<p>If <span class="math inline">\(N(\varepsilon)\)</span> is the minimum number of boxes of side <span class="math inline">\(\varepsilon\)</span> covering an object <span class="math inline">\(F\)</span>, then the box-counting dimension <span class="math inline">\(d_F\)</span> of this object is:</p>
+<p><span class="math display">\[
+d_F = \lim_{\varepsilon \rightarrow 0} \frac{\log N(\varepsilon)}{\log 1/\varepsilon}.
+\]</span></p>
+<p><em>In general, this boundary may not exist. In such situations, the upper and lower limits of this sequence can be considered separately. But for the objects presented in this book, the so-defined limit always converges to something. Moreover, it does not matter what size of boxes we choose. However, I show examples for boxes that `tightly’ cover parts of the figure of interest to make calculations easier.</em></p>
+<p>Let’s assume for now that we are interested in boxes of side <span class="math inline">\(\varepsilon = 2^{-k}\)</span>. If we want to cover a square of side <span class="math inline">\(1\)</span> with such boxes, we need at least <span class="math inline">\(N(\varepsilon) = 2^k * 2^k = 2^{2k}\)</span> of them.Therefore, the box-counting dimension of the square is:</p>
+<p><span class="math display">\[
+d_F = \lim_{k \rightarrow \infty} \frac{\log 2^{2k}}{\log 1/2^{-k}} = 2.
+\]</span></p>
+<p>What about the Sierpiński triangle? Here we only need <span class="math inline">\(N(\varepsilon) = 3^k\)</span> boxes of side <span class="math inline">\(2^{-k}\)</span>, so the box dimension for this triangle is:</p>
+<p><span class="math display">\[
+d_F = \lim_{k \rightarrow \infty} \frac{\log 3^{k}}{\log 1/2^{-k}} = \frac{\log 3}{\log 2} = 1,5849\ldots
+\]</span></p>
+<p><a href="images/dywan_Sierpinskiego.png" title="Figure 4: The first four iterations in the construction of the Sierpinski carpet">Figure 4</a> illustrates what an example of covering a Sierpiński triangle with boxes of sides 1/4 and 1/8 looks like.</p>
+<div class="figure">
+<img src="images/trojkat_Sierpinskiego_pokrycie.png" alt="" />
+<p class="caption">Rysunek 4: Covering the Sierpiński triangle with boxes of sides 1/4 (left panel) and 1/8 (right panel)</p>
+</div>
+<p>What is the dimension of Cantor dust? This time, we have an object in one-dimensional space, so we will cover it with line segments. Suppose we have line segments of length <span class="math inline">\(\varepsilon = 3^{-k}\)</span>. To cover the entire Cantor dust, we need <span class="math inline">\(N(\varepsilon) = 2^k\)</span>such segments; that is, the box dimension for Cantor dust is:</p>
+<p><span class="math display">\[
+d_F = \lim_{k \rightarrow \infty} \frac{\log 2^{k}}{\log 1/3^{-k}} = \frac{\log 2}{\log 3} = 0,6309\ldots
+\]</span></p>
+<p><em>BK: It is unusual that the dimension of the Cantor set, whose all components are one-point sets (so it has a topological dimension of 0), has a box dimension sharply larger than 0 and fractionally so.</em></p>
+</div>
+<div id="sierpiński-carpet" class="section level3 hasAnchor" number="1.3.3">
+<h3><span class="header-section-number">1.3.3</span> Sierpiński carpet<a href="but-why-does-it-work.html#sierpiński-carpet" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>We already know what fractals are characterized by. It is time to get to know more representatives of this amazing family. Another well-known example is the Sierpiński carpet.</p>
+<p><strong>Recipe for Sierpiński carpet construction.</strong></p>
+<ol style="list-style-type: decimal">
+<li>Take a square of any size.</li>
+<li>Divide this square into nine squares.</li>
+<li>Remove the inside of the middle square; you will get eight squares with a side 1/3 of the initial square.</li>
+<li>For each of the resulting eight squares, continue the division by returning to step 2.</li>
+</ol>
+<p>For an illustration of the four consecutive steps of the biting algorithm, see [Figure 5].</p>
+<div class="figure">
+<img src="images/dywan_Sierpinskiego.png" alt="" />
+<p class="caption">Figure 5: The first four iterations in the construction of the Sierpiński carpet.</p>
+</div>
+<p>What is the box dimension of this object? Let’s take boxes of side <span class="math inline">\(\varepsilon = 3^{-k}\)</span>. To cover the carpet, we need <span class="math inline">\(N(\varepsilon) = 8^k\)</span> boxes of such size. So the box dimension of this carpet is:</p>
+<p><span class="math display">\[
+d_F = \lim_{k \rightarrow \infty} \frac{\log 8^{k}}{\log 1/3^{-k}} = \frac{\log 8}{\log 3} = 1,8927...
+\]</span></p>
+</div>
+</div>
+<h3>Bibliografia<a href="bibliografia.html#bibliografia" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="refs" class="references csl-bib-body">
+<div id="ref-wymiar" class="csl-entry">
+<div class="csl-left-margin">[Nowa11] </div><div class="csl-right-inline"><span class="smallcaps">Nowak, Sławomir</span>: Kilka słów o wymiarze. In: <em>Delta</em> Bd. 11 (2011)</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="hello-fractals-1.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="examples-in-python.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook/js/app.min.js"></script>
+<script src="libs/gitbook/js/clipboard.min.js"></script>
+<script src="libs/gitbook/js/plugin-search.js"></script>
+<script src="libs/gitbook/js/plugin-sharing.js"></script>
+<script src="libs/gitbook/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook/js/jquery.highlight.js"></script>
+<script src="libs/gitbook/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection",
+"toc_depth": 3
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
