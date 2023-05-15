@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>3.2 Chaos Game | Chaos Game</title>
   <meta name="description" content="3.2 Chaos Game | Chaos Game" />
-  <meta name="generator" content="bookdown 0.29 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.32 and GitBook 2.6.7" />
 
   <meta property="og:title" content="3.2 Chaos Game | Chaos Game" />
   <meta property="og:type" content="book" />
@@ -23,7 +23,7 @@
 <meta name="author" content="" />
 
 
-<meta name="date" content="2023-01-01" />
+<meta name="date" content="2023-05-15" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -323,7 +323,7 @@ div.csl-indent {
 <p>The method of generating fractals presented in the previous chapter is based on recursion. By composing the transformations, the number of objects we need to draw grows exponentially. In the case of the fern, which consists of four transformations, generating a fern at a depth of 10 requires drawing <span class="math inline">\(4^{10}\)</span> points (more than a million). And 10 levels is very little if we want to get attractive high-resolution graphics.
 If we wanted to perform <span class="math inline">\(56\)</span> iterations for a Sierpiński carpet, we would have to draw <span class="math inline">\(8^{56}&gt;10^{50}\)</span> points, which is more than there are atoms on the whole Earth!</p>
 <p>It turns out that fractals based on the composition of contractions can be generated in a more controlled way. Moreover, it will turn out to be based on the generation of random movements.</p>
-<p>Readers, it will be amazing! Repeating random movements repeatedly will continuously lead us to invariably constant geometric figures. It turns out that even long random trajectories can lead to predictable patterns, and this will be the chaos game.</p>
+<p>Readers, it will be amazing! Performing random movements repeatedly will continuously lead us to invariably constant geometric figures. It turns out that even long random trajectories can lead to predictable patterns, and this will be the chaos game.</p>
 <div id="chaos-game-and-triangles" class="section level3 hasAnchor" number="3.2.1">
 <h3><span class="header-section-number">3.2.1</span> Chaos game and triangles<a href="chaos-game-1.html#chaos-game-and-triangles" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Let’s start with a simple example, which will be a generalized method for constructing the Sierpiński triangle. Let’s proceed with the following algorithm…</p>
@@ -343,7 +343,7 @@ If we wanted to perform <span class="math inline">\(56\)</span> iterations for a
 <p>Note, Dear Reader, that moving the pen by half the distance towards the selected vertex is equivalent to performing a transformation -&gt; reduce the image by 1/2 and move towards the selected vertex.</p>
 <p>Thus, in reality, we randomly perform one of the transformations: (1) reduce 2 times and move toward vertex A, (2) reduce 2 times and move toward vertex B, or (3) reduce 2 times and move toward vertex C.</p>
 <p>In the previous chapter, we already used such transformations to build the Sierpiński triangle. But we used all three simultaneously, composing such a sum of transformations many times.</p>
-<p>It turns out that we don’t have to perform these transformations at the same time, just draw one and repeat this draw indefinitely.</p>
+<p>It turns out that we don’t have to perform these transformations at the same time, just draw one at a time and repeat this process.</p>
 </div>
 <div id="chaos-game-and-fractals" class="section level3 hasAnchor" number="3.2.3">
 <h3><span class="header-section-number">3.2.3</span> Chaos game and fractals<a href="chaos-game-1.html#chaos-game-and-fractals" class="anchor-section" aria-label="Anchor link to header"></a></h3>
@@ -412,40 +412,40 @@ d x + e y + f
 </thead>
 <tbody>
 <tr class="odd">
-<td><span class="math inline">\(T_1\)</span>: łodyżka</td>
-<td>0,00</td>
-<td>0,00</td>
+<td><span class="math inline">\(T_1\)</span>: stem</td>
+<td>0.00</td>
+<td>0.00</td>
 <td>0</td>
-<td>0,00</td>
-<td>0,16</td>
-<td>0,00</td>
+<td>0.00</td>
+<td>0.16</td>
+<td>0.00</td>
 </tr>
 <tr class="even">
-<td><span class="math inline">\(T_2\)</span>: góra</td>
-<td>0,85</td>
-<td>0,04</td>
+<td><span class="math inline">\(T_2\)</span>: top</td>
+<td>0.85</td>
+<td>0.04</td>
 <td>0</td>
-<td>$-$0,04</td>
-<td>0,85</td>
-<td>1,60</td>
+<td>$-$0.04</td>
+<td>0.85</td>
+<td>1.60</td>
 </tr>
 <tr class="odd">
-<td><span class="math inline">\(T_3\)</span>: lewy liść</td>
-<td>0,20</td>
-<td>$-$0,26</td>
+<td><span class="math inline">\(T_3\)</span>: left leaf</td>
+<td>0.20</td>
+<td>$-$0.26</td>
 <td>0</td>
-<td>0,23</td>
-<td>0,22</td>
-<td>0,80</td>
+<td>0.23</td>
+<td>0.22</td>
+<td>0.80</td>
 </tr>
 <tr class="even">
-<td><span class="math inline">\(T_4\)</span>: prawy liść</td>
-<td>$-$0,15</td>
-<td>0,28</td>
+<td><span class="math inline">\(T_4\)</span>: right leaf</td>
+<td>$-$0.15</td>
+<td>0.28</td>
 <td>0</td>
-<td>0,26</td>
-<td>0,24</td>
-<td>0,44</td>
+<td>0.26</td>
+<td>0.24</td>
+<td>0.44</td>
 </tr>
 </tbody>
 </table>

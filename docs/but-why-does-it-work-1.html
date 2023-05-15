@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>2.3 But why does it work? | Chaos Game</title>
   <meta name="description" content="2.3 But why does it work? | Chaos Game" />
-  <meta name="generator" content="bookdown 0.29 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.32 and GitBook 2.6.7" />
 
   <meta property="og:title" content="2.3 But why does it work? | Chaos Game" />
   <meta property="og:type" content="book" />
@@ -23,7 +23,7 @@
 <meta name="author" content="" />
 
 
-<meta name="date" content="2023-01-01" />
+<meta name="date" content="2023-05-15" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -381,7 +381,7 @@ A transformation <span class="math inline">\(T\)</span> is a contraction mapping
 <p><span class="math display">\[
 \forall_{x,y} d(T(x), T(y)) \leq \lambda d(x,y).
 \]</span></p>
-<p>That is, for any two points, <span class="math inline">\(x\)</span> i <span class="math inline">\(y\)</span>, after the transformation, they are closer than before.</p>
+<p>That is, for any two points, <span class="math inline">\(x\)</span> i <span class="math inline">\(y\)</span>, after the transformation, they are closer than before by a scale factor <span class="math inline">\(\lambda &lt; 1\)</span>.</p>
 <p>In the examples discussed at the beginning of the chapter, every transformation shown was a contraction. Why? The transformations consisted of rotations, shifting, and scaling. Rotation and shifting do not change the distance between points. And all scaling was done by a factor of less than 1 for each axis.</p>
 </div>
 <div id="affine-transformation" class="section level3 hasAnchor" number="2.3.6">
@@ -424,7 +424,7 @@ More precisely:</p>
 If <span class="math inline">\((X, d)\)</span> is a complete metric space, and <span class="math inline">\(T: X\to X\)</span> is a contraction, then <span class="math inline">\(T\)</span> has exactly one fixed point <span class="math inline">\(x\in X\)</span>.</p>
 <p>The fixed point of the transformation <span class="math inline">\(T\)</span> is <span class="math inline">\(x\)</span> such that <span class="math inline">\(T(x) = x\)</span>.</p>
 <p>Banach presented the proof of this theorem in his doctoral thesis. It is not very complicated and can be found, for example, in <em>Delta</em> of July 2011 <span class="citation">[<a href="#ref-ifsKiciak" role="doc-biblioref">Kici11</a>]</span>. Here we will limit ourselves only to showing how to look for this fixed point.</p>
-<p>Well, it turns out that for any point <span class="math inline">\(x\)</span> przestrzeni <span class="math inline">\(X\)</span> the sequence <span class="math inline">\(T^n(x)\)</span> converges to a fixed point, where <span class="math inline">\(T^n(x)\)</span> denotes the <span class="math inline">\(n\)</span>-folded composition of the transformation <span class="math inline">\(T\)</span>, that is, <span class="math inline">\(T(T(T(...T(x)...)))\)</span>.
+<p>Well, it turns out that for any point <span class="math inline">\(x\)</span> of the space <span class="math inline">\(X\)</span> the sequence <span class="math inline">\(T^n(x)\)</span> converges to a fixed point, where <span class="math inline">\(T^n(x)\)</span> denotes the <span class="math inline">\(n\)</span>-folded composition of the transformation <span class="math inline">\(T\)</span>, that is, <span class="math inline">\(T(T(T(...T(x)...)))\)</span>.
 Thus, it is enough to infinitely compose the contractions to find their fixed point.</p>
 <p>And such a fixed point are the fractals we construct…</p>
 </div>

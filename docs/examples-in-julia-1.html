@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>2.6 Examples in Julia | Chaos Game</title>
   <meta name="description" content="2.6 Examples in Julia | Chaos Game" />
-  <meta name="generator" content="bookdown 0.29 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.32 and GitBook 2.6.7" />
 
   <meta property="og:title" content="2.6 Examples in Julia | Chaos Game" />
   <meta property="og:type" content="book" />
@@ -23,7 +23,7 @@
 <meta name="author" content="" />
 
 
-<meta name="date" content="2023-01-01" />
+<meta name="date" content="2023-05-15" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -390,7 +390,7 @@ div.csl-indent {
 <span id="cb22-10"><a href="examples-in-julia-1.html#cb22-10" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">heighway</span>(x, depth, col)</span>
 <span id="cb22-11"><a href="examples-in-julia-1.html#cb22-11" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> depth <span class="op">&gt;</span> <span class="fl">1</span></span>
 <span id="cb22-12"><a href="examples-in-julia-1.html#cb22-12" aria-hidden="true" tabindex="-1"></a>    x1 <span class="op">=</span> <span class="fu">rotatex</span>(x, <span class="op">-</span><span class="fl">45</span>) <span class="op">*</span> <span class="fu">sqrt</span>(<span class="fl">0.5</span>)</span>
-<span id="cb22-13"><a href="examples-in-julia-1.html#cb22-13" aria-hidden="true" tabindex="-1"></a>    x2 <span class="op">=</span> <span class="fu">rotatex</span>(x, <span class="op">-</span><span class="fl">45</span>) <span class="op">*</span> <span class="fu">sqrt</span>(<span class="fl">0.5</span>) <span class="op">+</span> [<span class="fl">0.75</span> <span class="fl">0.25</span>]<span class="ch">&#39;</span></span>
+<span id="cb22-13"><a href="examples-in-julia-1.html#cb22-13" aria-hidden="true" tabindex="-1"></a>    x2 <span class="op">=</span> <span class="fu">rotatex</span>(x, <span class="op">-</span><span class="fl">135</span>) <span class="op">*</span> <span class="fu">sqrt</span>(<span class="fl">0.5</span>) <span class="op">+</span> [<span class="fl">0.75</span> <span class="fl">0.25</span>]<span class="ch">&#39;</span></span>
 <span id="cb22-14"><a href="examples-in-julia-1.html#cb22-14" aria-hidden="true" tabindex="-1"></a>    <span class="fu">heighway</span>(x1, depth<span class="op">-</span><span class="fl">1</span>, <span class="st">&quot;blue&quot;</span>)</span>
 <span id="cb22-15"><a href="examples-in-julia-1.html#cb22-15" aria-hidden="true" tabindex="-1"></a>    <span class="fu">heighway</span>(x2, depth<span class="op">-</span><span class="fl">1</span>, <span class="st">&quot;red&quot;</span>)</span>
 <span id="cb22-16"><a href="examples-in-julia-1.html#cb22-16" aria-hidden="true" tabindex="-1"></a>  <span class="cf">else</span></span>

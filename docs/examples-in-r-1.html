@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>2.5 Examples in R | Chaos Game</title>
   <meta name="description" content="2.5 Examples in R | Chaos Game" />
-  <meta name="generator" content="bookdown 0.29 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.32 and GitBook 2.6.7" />
 
   <meta property="og:title" content="2.5 Examples in R | Chaos Game" />
   <meta property="og:type" content="book" />
@@ -23,7 +23,7 @@
 <meta name="author" content="" />
 
 
-<meta name="date" content="2023-01-01" />
+<meta name="date" content="2023-05-15" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -419,7 +419,7 @@ y_3 = x * \left[\begin{smallmatrix}
 <span id="cb18-2"><a href="examples-in-r-1.html#cb18-2" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (depth <span class="sc">&gt;</span> <span class="dv">1</span>) {</span>
 <span id="cb18-3"><a href="examples-in-r-1.html#cb18-3" aria-hidden="true" tabindex="-1"></a>    x1 <span class="ot">=</span> x<span class="sc">|&gt;</span> <span class="fu">rotate</span>(<span class="dv">45</span>)<span class="sc">|&gt;</span> <span class="fu">scale</span>(<span class="fu">sqrt</span>(<span class="fl">0.5</span>))<span class="sc">|&gt;</span> <span class="fu">shift</span>(<span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">0</span>)) </span>
 <span id="cb18-4"><a href="examples-in-r-1.html#cb18-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">heighway</span>(x1, depth<span class="dv">-1</span>, <span class="at">color=</span><span class="st">&quot;blue&quot;</span>)</span>
-<span id="cb18-5"><a href="examples-in-r-1.html#cb18-5" aria-hidden="true" tabindex="-1"></a>    x2 <span class="ot">=</span> x<span class="sc">|&gt;</span> <span class="fu">rotate</span>(<span class="dv">45</span>)<span class="sc">|&gt;</span> <span class="fu">scale</span>(<span class="fu">sqrt</span>(<span class="fl">0.5</span>)) </span>
+<span id="cb18-5"><a href="examples-in-r-1.html#cb18-5" aria-hidden="true" tabindex="-1"></a>    x2 <span class="ot">=</span> x<span class="sc">|&gt;</span> <span class="fu">rotate</span>(<span class="dv">135</span>)<span class="sc">|&gt;</span> <span class="fu">scale</span>(<span class="fu">sqrt</span>(<span class="fl">0.5</span>)) </span>
 <span id="cb18-6"><a href="examples-in-r-1.html#cb18-6" aria-hidden="true" tabindex="-1"></a>    <span class="fu">heighway</span>(x2, depth<span class="dv">-1</span>, <span class="at">color=</span><span class="st">&quot;red&quot;</span>)</span>
 <span id="cb18-7"><a href="examples-in-r-1.html#cb18-7" aria-hidden="true" tabindex="-1"></a>  } <span class="cf">else</span> </span>
 <span id="cb18-8"><a href="examples-in-r-1.html#cb18-8" aria-hidden="true" tabindex="-1"></a>    <span class="fu">points</span>(x[<span class="dv">1</span>], x[<span class="dv">2</span>], <span class="at">pch=</span><span class="dv">19</span>, <span class="at">col=</span>color, <span class="at">cex=</span><span class="fl">0.5</span>) </span>

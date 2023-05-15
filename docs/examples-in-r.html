@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>1.5 Examples in R | Chaos Game</title>
   <meta name="description" content="1.5 Examples in R | Chaos Game" />
-  <meta name="generator" content="bookdown 0.29 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.32 and GitBook 2.6.7" />
 
   <meta property="og:title" content="1.5 Examples in R | Chaos Game" />
   <meta property="og:type" content="book" />
@@ -23,7 +23,7 @@
 <meta name="author" content="" />
 
 
-<meta name="date" content="2023-01-01" />
+<meta name="date" content="2023-05-15" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -353,7 +353,7 @@ Here is some information to help you understand this code.</p>
 </div>
 <div id="sierpinski-triangle-2" class="section level3 hasAnchor" number="1.5.2">
 <h3><span class="header-section-number">1.5.2</span> Sierpinski triangle<a href="examples-in-r.html#sierpinski-triangle-2" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>It’s time for the iconic Sierpiński triangle. To draw it, we will use the recursive function <code>sierpinski()</code>, which takes four arguments: <code>x</code>, <code>y</code> – the location from which to draw the fractal, <code>scale</code> – information about the size of the fractal, and depth <code>depth</code> – the current nesting level of the fractal.</p>
+<p>It’s time for the iconic Sierpiński triangle. To draw it, we will use the recursive function <code>sierpinski()</code>, which takes four arguments: <code>x</code>, <code>y</code> – the location from which to draw the fractal, <code>scale</code> – information about the size of the fractal, and <code>depth</code> – the current nesting level of the fractal.</p>
 <div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="examples-in-r.html#cb5-1" aria-hidden="true" tabindex="-1"></a>triangle <span class="ot">&lt;-</span> <span class="cf">function</span>(x, y, scale) {</span>
 <span id="cb5-2"><a href="examples-in-r.html#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">polygon</span>(x <span class="sc">+</span> scale<span class="sc">*</span><span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">1</span><span class="sc">/</span><span class="dv">2</span>), </span>
 <span id="cb5-3"><a href="examples-in-r.html#cb5-3" aria-hidden="true" tabindex="-1"></a>          y <span class="sc">+</span> scale<span class="sc">*</span><span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">0</span>, <span class="fu">sqrt</span>(<span class="dv">3</span>)<span class="sc">/</span><span class="dv">2</span>), <span class="at">col =</span> <span class="st">&quot;black&quot;</span>)</span>
